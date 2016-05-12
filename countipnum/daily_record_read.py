@@ -71,10 +71,10 @@ def write_dic(filePoint,params,keywords=None):
 		localtime=str(time.strftime("%Y-%m-%d-%X", time.localtime()))
 
 		readfile(path=keywords[3],callback=keyword_file,needWrite=True,writeFilename=str(i)+'.'+localtime+'.log',keywords=keywords)
-	
+		keywords.pop()
 if __name__ == "__main__":
 	keywords='evaluate'
-	keyarray=['11/May/2016:00:0','200','evaluate','access.log']
+	keyarray=['04/May/2016:16:2','200','evaluate','access.log']
 	localtime=str(time.strftime("%Y-%m-%d-%X", time.localtime()))
 	readfile(path=keyarray[3],callback=deal_file,needWrite=True,writeFilename=keywords+'.'+localtime+'.log',keywords=keyarray)
 
